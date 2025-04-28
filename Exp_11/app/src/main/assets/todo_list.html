@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f5;
+        }
+
+        .header {
+            background-color: #f8f8f8;
+            padding: 10px 20px;
+            border-bottom: 1px solid #e1e1e1;
+            text-align: center;
+            position: sticky;
+            top: 0;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .sub-header {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #f8f8f8;
+            color: #777;
+            font-size: 12px;
+        }
+
+        .todo-list {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .todo-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 20px;
+            border-bottom: 1px solid #e1e1e1;
+            background-color: white;
+        }
+
+        .checkbox {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid #ccc;
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .checkbox.checked {
+            background-color: #3478F6;
+            border-color: #3478F6;
+        }
+
+        .checkbox.checked::after {
+            content: "✓";
+            color: white;
+            font-size: 12px;
+        }
+
+        .todo-text {
+            flex: 1;
+        }
+
+        .detail-button {
+            color: #ccc;
+            font-size: 16px;
+        }
+
+        .footer {
+            padding: 10px 20px;
+            text-align: center;
+            color: #888;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>To-Do List</h1>
+    <div class="sub-header">
+        <span>URGENT THINGS TO BE DONE!</span>
+        <span>Completed</span>
+    </div>
+</div>
+
+<ul class="todo-list">
+    <li class="todo-item">
+        <div class="checkbox checked"></div>
+        <div class="todo-text">Meet with manager</div>
+        <div class="detail-button">›</div>
+    </li>
+    <li class="todo-item">
+        <div class="checkbox checked"></div>
+        <div class="todo-text">Groceries</div>
+        <div class="detail-button">›</div>
+    </li>
+    <li class="todo-item">
+        <div class="checkbox"></div>
+        <div class="todo-text">Exercise</div>
+        <div class="detail-button">›</div>
+    </li>
+    <li class="todo-item">
+        <div class="checkbox checked"></div>
+        <div class="todo-text">Walk dog</div>
+        <div class="detail-button">›</div>
+    </li>
+    <li class="todo-item">
+        <div class="checkbox"></div>
+        <div class="todo-text">Return library books</div>
+        <div class="detail-button">›</div>
+    </li>
+    <li class="todo-item">
+        <div class="checkbox"></div>
+        <div class="todo-text">Wash car</div>
+        <div class="detail-button">›</div>
+    </li>
+    <li class="todo-item">
+        <div class="checkbox checked"></div>
+        <div class="todo-text">Finish work project</div>
+        <div class="detail-button">›</div>
+    </li>
+    <li class="todo-item">
+        <div class="checkbox"></div>
+        <div class="todo-text">Laundry</div>
+        <div class="detail-button">›</div>
+    </li>
+</ul>
+
+<div class="footer">
+    5 items left
+</div>
+
+<script>
+    // Add interactivity to the checkboxes
+    document.querySelectorAll('.checkbox').forEach(checkbox => {
+        checkbox.addEventListener('click', function() {
+            this.classList.toggle('checked');
+            updateItemsLeft();
+        });
+    });
+
+    // Update the items left counter
+    function updateItemsLeft() {
+        const totalItems = document.querySelectorAll('.checkbox').length;
+        const checkedItems = document.querySelectorAll('.checkbox.checked').length;
+        const itemsLeft = totalItems - checkedItems;
+        document.querySelector('.footer').textContent = itemsLeft + ' items left';
+    }
+
+    // Initialize counter
+    updateItemsLeft();
+</script>
+</body>
+</html>
