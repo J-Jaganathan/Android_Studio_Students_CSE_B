@@ -1,7 +1,7 @@
 # Application Development in Android Studio
 
 ## 🎯 Project Purpose (Why This Matters)
-This Repository is created for my classmates earlier and this is created 5 days ago, but today, as these might not be useful for them today, these will be useful for my friends and classmates in future who wants to explore and test their configurations on Android Studio 2024 version and yes, it is made based on 2024 version of Android Studio.
+This Repository is created for my classmates earlier and this is created 5 days ago, but today, as these might not be useful for them. These will be useful them in future and for my viewers and subscribers who wants to explore and test their configurations on Android Studio 2024 version and yes, it is made based on 2024 version of Android Studio.
 
 This entire repository consists of 11 experiments is designed to help you understand the fundamental building blocks of Android app development:
 - How user interfaces are constructed using XML layouts
