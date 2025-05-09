@@ -1,4 +1,4 @@
-# MAD Lab Experiment: Interactive UI Demonstration
+# Application Development in Android Studio
 
 ## 🎯 Project Purpose (Why This Matters)
 This Repository is created for my classmates earlier and this is created 5 days ago, but today, as these might not be useful for them today, these will be useful for my friends and classmates in future who wants to explore and test their configurations on Android Studio 2024 version and yes, it is made based on 2024 version of Android Studio.
